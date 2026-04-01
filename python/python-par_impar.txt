@@ -1,0 +1,9 @@
+def numero(a):
+    if a %2 == 0:
+        return("par")
+    else: 
+        return ("impar")
+    
+resultado = numero (2)
+
+print (resultado)
