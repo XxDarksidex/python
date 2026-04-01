@@ -1,9 +1,10 @@
-def numero(a):
-    if a %2 == 0:
-        return("par")
-    else: 
-        return ("impar")
-    
-resultado = numero (2)
+n1 = int(input("digite um numero:"))
 
-print (resultado)
+def parimpar(numero):
+    if numero%2 == 0:
+        return "par"
+    else:
+        return "impar"
+        
+resultado = parimpar(n1)
+print(resultado)
