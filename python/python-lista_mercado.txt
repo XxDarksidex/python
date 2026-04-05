@@ -1,0 +1,20 @@
+total = 0
+
+while True: 
+    lista = input('digite um item:')
+    
+    if lista == 'sair':
+        print (f'Total: R$ {total:.2f}')
+        print ('saindo...')
+        break
+    
+    elif lista == ('queijo'):
+        total += 20.89
+        print (20.89)
+        
+    elif lista == ('pão'):
+        total += 10
+        print (10)
+        
+    else:
+        print ('não encontrado')
