@@ -1,0 +1,37 @@
+create table cliente (
+id_cliente int auto_increment primary key,
+nome varchar (45) not null
+);
+
+create table item_pedido(
+id_item int auto_increment primary key,
+descricao varchar (200), 
+preco decimal (10,2) not null,
+id_pedido int,
+foreign key (id_pedido) references pedido (id_pedido)
+);
+
+
+create table pedido (
+id_pedido int auto_increment primary key,
+descricao varchar (200) not null, 
+data_pedido datetime default current_timestamp,
+preco decimal (10,2) not null,
+id_cliente int,
+id_item int,
+foreign key (id_cliente) references cliente (id_cliente)
+);
+
+insert into pedido (descricao, preco, id_cliente) values ("açucar",4000,1), ("agua",2.99,2),("doritos", 30,3);
+insert into item_pedido (descricao,preco,id_pedido) values ("açucar",40,1);
+insert into cliente (nome) values ("joão"),("maria"),("pedro");
+
+select * from cliente;
+select * from pedido;
+select * from item_pedido;
+
+delete from cliente;
+delete from pedido;
+
+drop table pedido;
+drop table item_pedido;
