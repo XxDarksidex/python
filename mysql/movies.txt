@@ -1,0 +1,9 @@
+select * from movies;
+select * from movies where genero = "Comedy";
+select * from movies where tomates_podres >= 90;
+select count(*) from movies where tomates_podres > 80;
+
+delete from movies where id = 2;
+
+alter table movies add column id int auto_increment primary key first;
+alter table movies change `COL 1` nome text;
