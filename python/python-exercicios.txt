@@ -47,10 +47,10 @@ for i in range(5):
 print (lista)    
 
 7_while True:
-    numero = float(input("digite um numero(aperte '0' para sair):"))
+    numero = float(input("digite um numero(digite '-1' para sair):"))
     if numero %2 == 0:
         print("par")
-    elif numero == "0":
+    elif numero == -1:
         break
     else:
         print("impar")
