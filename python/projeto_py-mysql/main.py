@@ -6,18 +6,18 @@ conexao = mysql.connector.connect(
 #parametros de conexão ao banco de dados
     host = "localhost",
     user = "root",
-    password = "admin",
+    password = "",
     database = "oficina"
 )
 
-print("conectado")
+print ("conectado")
 
 # função cursor() da lib, serve para manipular os dados de envio para o banco
 cursor = conexao.cursor()
 
 #comandos e valores para envio de dados em SQL
-sql = "insert into funcionarios (nome,idade,data_nascimento) values (%s,%s,%s)"
-values = ("pedrinho",15,'2026-04-30')
+sql = "insert into funcionarios (nome,data_nascimento) values (%s,%s)"
+values = ("maria",'2008-02-01')
 
 cursor.execute(sql,values)
 conexao.commit()
